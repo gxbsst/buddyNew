@@ -1,0 +1,112 @@
+ 
+<div class="banner_bg">
+<div class="banner">
+<ul class="gnineh">
+ <% @pictures.each_with_index do |picture, index| %>
+   <% if index == 0 %>
+      <li class="frist"> 
+         <%= link_to picture.url  do %>
+            <%= image_fu(picture.photo, "155x155px") %>
+         <% end %>
+         <div class="info"></div>      
+      </li>
+      <% elsif index < 4 %>
+         <li> 
+         <%= link_to picture.url  do %>
+            <%= image_fu(picture.photo, "155x155px") %>
+         <% end %>
+         <div class="info"></div>      
+      </li>
+    <% elsif index == 4 %>
+      <li class="frist bottom"> 
+           <%= link_to picture.url  do %>
+              <%= image_fu(picture.photo, "155x155px") %>
+          <% end %>
+          <div class="info"></div>
+      </li>
+      <% elsif index > 4 %>
+      <li class="bottom"> 
+           <%= link_to picture.url  do %>
+              <%= image_fu(picture.photo, "155x155px") %>
+          <% end %>
+          <div class="info"></div>
+      </li>
+    <% end %>
+
+ <% end %>
+<!--<li><a href="#" class="bl_2" id="top_bl">img1</a></li>
+<li><a href="#" class="bl_3" id="top_bl">img1</a></li>
+<li><a href="#" class="bl_4" id="top_bl">img1</a></li>
+
+<li><a href="#" class="bl_5" id="bottom_bl">img1</a></li>
+<li><a href="#" class="bl_6" id="bottom_bl">img1</a></li>
+<li><a href="#" class="bl_7" id="bottom_bl">img1</a></li>
+<li><a href="#" class="bl_8" id="bottom_bl">img1</a></li>-->
+
+</ul>
+
+<div class="banner_right"><img src="images/banner9.jpg" width="295" height="320" /></div>
+
+</div>
+</div>
+
+<div class="content">
+<div class="con_top">
+<div class="ct_left">
+<div class="cl_title">老友计划</div>
+<div class="cl_text">“老友计划”是一个非盈利的公益行动，旨在建立智障残障人士、失能孤寡老人与社会人士的友谊，改变社会人士对弱势人群的态度和观念，消除沟通障碍唤起平等真挚的社会交往，提升智障残障人士、失能孤寡老人的素养和参与社会交往的能力促进社会共融。</div>
+</div>
+<div class="ct_line"></div>
+<div class="ct_right">
+<div class="cr_btn"><img src="images/home_pic2.jpg" width="259" height="38" /></div>
+<div class="cr_bottom">
+ <!-- JiaThis Button BEGIN -->
+<div id="jiathis_style_32x32">
+  <span>
+     <a class="jiathis_button_kaixin001"><img src="images/home_pic3.gif" /></a><br><br><br>
+     <a class="jiathis_button_tsina"><img src="images/home_pic6.gif" /></a>
+  </span> 
+  <span>
+     <a class="jiathis_button_renren"><img src="images/home_pic5.gif" /></a><br><br><br>
+     <a class="jiathis_button_tqq"><img src="images/home_pic4.gif" /></a>
+  </span> 
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1341799835618494" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+</div>
+</div>
+</div>
+
+<div class="con_bottom">
+<div class="cb_left">
+<div class="clb_title">活动预告</div>
+	<% @events.each do |event| %>
+      <dl class="clb_con">
+        <dt><%= image_fu(event.photo, "260x150px") %></dt>
+        <dd class="cc_1"><%= event.title %></dd>
+		<dd class="cc_2">时间：<%= event.begin_at %></dd>
+		<dd class="cc_2">地点：<%= event.address %></dd>
+		<dd class="cc_2">类别：<%= event.category %></dd>
+     	<dd class="cc_2">内容：<%= event.content.truncate(20).html_safe %><a href="/events">［查看详情］</a></dd>  
+      </dl>
+	<% end %>
+
+
+</div>
+<div class="cb_line"></div>
+<div class="cb_right">
+<div class="cbr_title">分享感言</div>
+
+<% @shares.each do |share| %>
+  <ul class="cbr_bottom">
+     <li>	
+     <%= raw truncate(share.content,:length => 28,:omission => '...') %>
+		 <%= share.time %> 
+     </li>
+  </ul>
+ <% end %>
+</div>
+ 
+</div>
+</div>
+

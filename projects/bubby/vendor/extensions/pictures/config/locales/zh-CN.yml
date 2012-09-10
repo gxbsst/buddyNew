@@ -1,0 +1,29 @@
+en:
+  refinery:
+    plugins:
+      pictures:
+        title: 首页图片
+    pictures:
+      admin:
+        pictures:
+          actions:
+            create_new: 添加图片
+            reorder: 图片排序
+            reorder_done: 完成排序
+          records:
+            title: 首页图片
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Pictures yet. Click "Add New Picture" to add your first picture.
+          picture:
+            view_live_html: View this picture live <br/><em>(opens in a new window)</em>
+            edit: 编辑图片
+            delete: 删除图片
+      pictures:
+        show:
+          other: 其他图片
+  activerecord:
+    attributes:
+      'refinery/pictures/picture':
+        title: 图片主题
+        url: 图片链接
+        photo: 图片添加

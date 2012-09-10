@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      pictures:
+        title: Pictures
+    pictures:
+      admin:
+        pictures:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Picture
+            reorder: Réordonner les Pictures
+            reorder_done: Fin de réordonnancement des Pictures
+          records:
+            title: Pictures
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Picture. Cliquer sur "Créer un(e) nouve(au/l/lle) Picture" pour créer votre premi(er/ère) picture.'
+          picture:
+            view_live_html: Voir ce(t/tte) picture <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) picture
+            delete: Supprimer définitivement ce(t/tte) picture
+      pictures:
+        show:
+          other: Autres Pictures
+  activerecord:
+    attributes:
+      'refinery/pictures/picture':
+        title: Title
+        url: Url
+        photo: Photo

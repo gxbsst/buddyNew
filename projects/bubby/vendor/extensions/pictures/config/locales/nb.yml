@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      pictures:
+        title: Pictures
+    pictures:
+      admin:
+        pictures:
+          actions:
+            create_new: Lag en ny Picture
+            reorder: Endre rekkefølgen på Pictures
+            reorder_done: Ferdig å endre rekkefølgen Pictures
+          records:
+            title: Pictures
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Pictures enda. Klikk på "Lag en ny Picture" for å legge til din første picture.
+          picture:
+            view_live_html: Vis hvordan denne picture ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne picture
+            delete: Fjern denne picture permanent
+      pictures:
+        show:
+          other: Andre Pictures
+  activerecord:
+    attributes:
+      'refinery/pictures/picture':
+        title: Title
+        url: Url
+        photo: Photo

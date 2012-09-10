@@ -1,0 +1,37 @@
+ 
+<div class="content"> <div class="prompt">
+  <div class="pro_con">您现在的位置：<a href="/homes">首页</a> > <span>活动</span></div></div>
+
+<div class="subpage_con">
+<div class="subc_top"></div>
+
+<div class="subc_center">
+<div class="sc_title2">活动——我们努力让每一次活动都发挥最大的效能。</div>
+<div class="scon_title">
+<span class="sct_left"><%= @event.title %></span><span>时间：<%= @event.begin_at %></span>
+</div>
+<div class="scon_con">
+<p class="scc_img"><%= image_fu(@event.photo, "310x220px") %></p> 
+<p><%= @event.content.html_safe %></p>
+<p class="line2"></p>
+
+<p class="scc_btn">
+	<%= link_to '/events/list' do  %>
+		<img src="/images/sc_pic2.gif" width="155" height="40" border="0" /> 
+    <% end %>
+</p>
+</div>
+
+
+</div>
+
+
+
+<div class="subc_bottom"></div>
+
+</div>
+
+</div>
+
+ 
+ 
